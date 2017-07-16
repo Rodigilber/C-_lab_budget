@@ -161,5 +161,10 @@ namespace inventio_win
             ow.ShowDialog();
 
         }
+
+        private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

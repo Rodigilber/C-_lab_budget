@@ -60,9 +60,6 @@
             this.btnDatabaseConfig = new System.Windows.Forms.Button();
             this.btnStaff = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hTransactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -75,7 +72,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.panel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -93,12 +89,12 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.AllowDrop = true;
-            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox2);
             this.splitContainer1.Panel1.Controls.Add(this.picMinimize);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.picClose);
+            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -124,7 +120,6 @@
             this.splitContainer1.Panel2.Controls.Add(this.btnDatabaseConfig);
             this.splitContainer1.Panel2.Controls.Add(this.btnStaff);
             this.splitContainer1.Panel2.Controls.Add(this.listView1);
-            this.splitContainer1.Panel2.Controls.Add(this.menuStrip1);
             this.splitContainer1.Size = new System.Drawing.Size(708, 499);
             this.splitContainer1.SplitterDistance = 91;
             this.splitContainer1.TabIndex = 0;
@@ -141,7 +136,7 @@
             // 
             // picMinimize
             // 
-            this.picMinimize.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.picMinimize.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.picMinimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picMinimize.BackgroundImage")));
             this.picMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -156,18 +151,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
+            this.label1.Font = new System.Drawing.Font("Consolas", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
             this.label1.Location = new System.Drawing.Point(50, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 47);
+            this.label1.Size = new System.Drawing.Size(189, 41);
             this.label1.TabIndex = 3;
-            this.label1.Text = "K-LAB";
+            this.label1.Text = "Koch Lab ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // picClose
             // 
-            this.picClose.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.picClose.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.picClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picClose.BackgroundImage")));
             this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -308,7 +303,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.BackColor = System.Drawing.SystemColors.HighlightText;
             this.panel1.Controls.Add(this.lblDateTime);
             this.panel1.Controls.Add(this.lbluser);
             this.panel1.Location = new System.Drawing.Point(0, 373);
@@ -338,6 +333,7 @@
             this.lbluser.TabIndex = 8;
             this.lbluser.Text = "Login user : ADMIN";
             this.lbluser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbluser.Click += new System.EventHandler(this.lbluser_Click);
             // 
             // btnStocksReport
             // 
@@ -502,35 +498,6 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.AutoSize = false;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(708, 11);
-            this.menuStrip1.TabIndex = 15;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.Visible = false;
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hTransactionToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 7);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // hTransactionToolStripMenuItem
-            // 
-            this.hTransactionToolStripMenuItem.Name = "hTransactionToolStripMenuItem";
-            this.hTransactionToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.H)));
-            this.hTransactionToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
-            this.hTransactionToolStripMenuItem.Text = "H Transaction";
-            this.hTransactionToolStripMenuItem.Click += new System.EventHandler(this.hTransactionToolStripMenuItem_Click);
-            // 
             // notifyIcon1
             // 
             this.notifyIcon1.BalloonTipText = "Time Management System";
@@ -555,8 +522,8 @@
             this.ClientSize = new System.Drawing.Size(708, 499);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -570,8 +537,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -610,8 +575,5 @@
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hTransactionToolStripMenuItem;
     }
 }

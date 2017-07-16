@@ -40,14 +40,18 @@ namespace POSMainForm
 
                     //if (SQLConn.dr["Role"].ToString().ToUpper() == "ADMIN")
                     //{
-                        frmMain m = new frmMain(SQLConn.dr["Username"].ToString(),Convert.ToInt32(SQLConn.dr["StaffID"]));
-                        m.Show();
-                        this.Hide();
-                        
+                    //frmMain m = new frmMain(SQLConn.dr["Username"].ToString(), Convert.ToInt32(SQLConn.dr["StaffID"]));
+                    //m.Show();
+                    //this.Hide();
+
+                    Main_Form m = new Main_Form(SQLConn.dr["Username"].ToString(), Convert.ToInt32(SQLConn.dr["StaffID"])); ;
+                    m.Show();
+                    this.Hide();
+
                     //}
                     //else 
                     //{
-                       
+
                     //}
                 }
                 else

@@ -35,13 +35,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtusername = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.lan_name_lbl = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOkay = new System.Windows.Forms.Button();
             this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.lan_name_lbl.SuspendLayout();
             this.SuspendLayout();
             // 
             // GroupBox1
@@ -57,7 +57,7 @@
             this.GroupBox1.Size = new System.Drawing.Size(380, 140);
             this.GroupBox1.TabIndex = 0;
             this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "Login Information";
+            this.GroupBox1.Text = "Datos de Acceso";
             // 
             // pictureBox1
             // 
@@ -83,9 +83,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(107, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 14);
+            this.label1.Size = new System.Drawing.Size(64, 14);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Username :";
+            this.label1.Text = "Usuario :";
             // 
             // txtPassword
             // 
@@ -106,25 +106,25 @@
             this.txtusername.Text = "admin";
             this.txtusername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtusername_KeyDown);
             // 
-            // panel2
+            // lan_name_lbl
             // 
-            this.panel2.BackColor = System.Drawing.Color.PowderBlue;
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(-4, -1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(425, 54);
-            this.panel2.TabIndex = 16;
+            this.lan_name_lbl.BackColor = System.Drawing.Color.PowderBlue;
+            this.lan_name_lbl.Controls.Add(this.label3);
+            this.lan_name_lbl.Location = new System.Drawing.Point(-12, -1);
+            this.lan_name_lbl.Name = "lan_name_lbl";
+            this.lan_name_lbl.Size = new System.Drawing.Size(421, 54);
+            this.lan_name_lbl.TabIndex = 16;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Viner Hand ITC", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(5, 9);
+            this.label3.Font = new System.Drawing.Font("Consolas", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkRed;
+            this.label3.Location = new System.Drawing.Point(14, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(243, 37);
+            this.label3.Size = new System.Drawing.Size(142, 27);
             this.label3.TabIndex = 4;
-            this.label3.Text = "CVSS Point of Sale";
+            this.label3.Text = "Koch-Login";
             // 
             // btnCancel
             // 
@@ -134,7 +134,7 @@
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Myriad Hebrew", 11.25F, System.Drawing.FontStyle.Italic);
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
             this.btnCancel.Location = new System.Drawing.Point(240, 205);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(147, 44);
@@ -151,7 +151,7 @@
             this.btnOkay.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnOkay.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.btnOkay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOkay.Font = new System.Drawing.Font("Myriad Hebrew", 11.25F, System.Drawing.FontStyle.Italic);
+            this.btnOkay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
             this.btnOkay.Location = new System.Drawing.Point(91, 205);
             this.btnOkay.Name = "btnOkay";
             this.btnOkay.Size = new System.Drawing.Size(143, 44);
@@ -170,7 +170,7 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOkay);
             this.Controls.Add(this.GroupBox1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.lan_name_lbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -181,8 +181,8 @@
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.lan_name_lbl.ResumeLayout(false);
+            this.lan_name_lbl.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -194,7 +194,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtusername;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel lan_name_lbl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCancel;
